@@ -5,10 +5,7 @@ const HomeScreen = ({ navigation }: any) => {
   return (
     <View>
       <Text>HomeScreen</Text>
-      <Button
-        title="メッセージ"
-        onPress={() => navigation.navigate("Message")}
-      />
+      <Button title="Feed" onPress={() => navigation.navigate("Feed")} />
       <Button title="設定" onPress={() => navigation.navigate("Setting")} />
     </View>
   );
