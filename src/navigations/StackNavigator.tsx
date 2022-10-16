@@ -5,6 +5,7 @@ import TabNavigator from "./TabNavigator";
 import SettingScreen from "../screens/SettingScreen";
 import FeedScreen from "../screens/FeedScreen";
 import MessageScreen from "../screens/MessageScreen";
+import AboutScreen from "../screens/AboutScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,9 +17,18 @@ const StackNavigator = () => {
         component={TabNavigator}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="Setting" component={SettingScreen} />
-      <Stack.Screen name="Feed" component={FeedScreen} />
-      <Stack.Screen name="Message" component={MessageScreen} />
+      <Stack.Group>
+        <Stack.Screen name="Setting" component={SettingScreen} />
+        <Stack.Screen name="Feed" component={FeedScreen} />
+        <Stack.Screen name="Message" component={MessageScreen} />
+      </Stack.Group>
+      <Stack.Group screenOptions={{ presentation: "modal" }}>
+        <Stack.Screen
+          name="About"
+          component={AboutScreen}
+          options={{ headerShown: false }}
+        />
+      </Stack.Group>
     </Stack.Navigator>
   );
 };
