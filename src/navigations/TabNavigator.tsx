@@ -1,10 +1,10 @@
-import { View, Text } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/HomeScreen";
 import UserScreen from "../screens/UserScreen";
-import { Ionicons, AntDesign } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 import MessageScreen from "../screens/MessageScreen";
+import { Image } from "native-base";
 
 const Tab = createBottomTabNavigator();
 
@@ -33,8 +33,13 @@ const TabNavigator = () => {
         name="User"
         component={UserScreen}
         options={{
-          tabBarIcon: ({ color, size }) => (
-            <AntDesign name="user" size={size} color={color} />
+          tabBarIcon: ({ size }) => (
+            <Image
+              source={{ uri: "https://wallpaperaccess.com/full/317501.jpg" }}
+              borderRadius={100}
+              size={size}
+              alt="image"
+            />
           ),
         }}
       />
