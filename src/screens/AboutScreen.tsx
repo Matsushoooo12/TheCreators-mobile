@@ -1,5 +1,5 @@
-import { Box, Text, Button } from "native-base";
 import React from "react";
+import { Box, Text, Button } from "native-base";
 
 const AboutScreen = ({ navigation }: any) => {
   return (
